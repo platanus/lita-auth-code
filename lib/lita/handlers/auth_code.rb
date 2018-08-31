@@ -1,6 +1,8 @@
 module Lita
   module Handlers
     class AuthCode < Handler
+      namespace "authtoken"
+
       route(/^authme$/i, command: true) do |response|
         pin = get_pin
         redis.set(pin, response.user.id)
