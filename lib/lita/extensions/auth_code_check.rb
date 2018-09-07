@@ -1,5 +1,3 @@
-require 'pry'
-
 module Lita
   module Extensions
     class AuthCodeCheck
