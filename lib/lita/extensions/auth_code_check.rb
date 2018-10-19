@@ -8,6 +8,7 @@ module Lita
         if check_auth
           user_id = named_redis.get(check_auth)
           route.update_param(:user_id, user_id)
+          named_redis.disconnect!
         end
       end
 
